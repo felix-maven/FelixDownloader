@@ -46,7 +46,7 @@ internal class DownloadImpl(var app: Application) : DownloadService {
         FileDownloader.getImpl().create(downloadConfig.url)
             .setPath(
                 File(
-                    app.getExternalFilesDir("Download"),
+                    downloadConfig.directory ?: app.getExternalFilesDir("Download"),
                     downloadConfig.name
                 ).absolutePath
             )

@@ -11,8 +11,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 10000
-        versionName "1.0.0"
+        versionCode 10001
+        versionName "1.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -51,8 +51,8 @@ publish {
     userOrg = 'felix-maven'
     groupId = 'com.felix.downloader'
     artifactId = 'felix-downloader'
-    publishVersion = '1.0.0'
-    desc = 'utils for android.'
+    publishVersion = android.defaultConfig.versionName
+    desc = 'downloader for android.'
     website = 'https://github.com/felix-maven/FelixDownloader'
 }
 //gradlew clean build bintrayUpload -PbintrayUser=felixforever -PbintrayKey=b27dc317644ed376cf84138ff81c9ac8d0ce04ed -PdryRun=false
